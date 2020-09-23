@@ -1,7 +1,5 @@
-# Basic Programming 1
+# [Basic Programming 1](https://open.kattis.com/problems/basicprogramming1)
 
-TODO
-
-## Solution
+Simple simulation.
 
 
