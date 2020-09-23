@@ -13,3 +13,5 @@ I am a former OIer who started programming competition from Grade 10 with C/C++.
 
 Please don't judge :) I am also trying to change some of these habits (ie. try to use STL more often)
 
+[Here](https://blog.csdn.net/pzler) is my blog about programming competition built in high school (written in Chinese).
+
