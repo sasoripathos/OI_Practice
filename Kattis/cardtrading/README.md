@@ -6,4 +6,6 @@ Assume we have selected K types as combos, say one of them is i. Denote ui as th
 
 The difference is ni - ui - (nj - uj) since the cost from other selected types are not changed. Since the target is to maximize the profit, for any given j, we only allow the switch with i iff the difference is positive. Furthermore, consider type k is also currently selected and ni - ui - (nj - uj) > nk - uk - (nj - uj) > 0. It is clear that we want to replace i instead of k with j since otherwise we can then replace i with k to further increase the profit.
 
-So we can use a priority queue (max heap) ordered by ni - ui and keep trying to replace the selected type with largest ni - ui with an unselected type until no replacement can happen.
+So we can use a priority queue (max heap) ordered by ni - ui and keep trying to replace the selected type with largest ni - ui with an unselected type until no replacement can happen. [(cardtrading.cpp)](cardtrading.cpp)
+
+But if we further observe the properties above, we will notice the result is simply selecting the k types with smallest ni - ui, a sort can work. [(cardtrading1.cpp)](cardtrading1.cpp)
