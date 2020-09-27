@@ -1,0 +1,3 @@
+# [Opening Ceremony](https://open.kattis.com/problems/ceremony)
+
+Since we want to minimize the number of charges, we should always remove the first floor if we choose to "remove all the x-th floors" (so that we reduce hight of as many tower blocks as possible). So an optimal solution is always first perform some "remove all the first floors" and then remove the rest blocks one by one. So we can first sort the input and consider using "remove all the x-th floors" to remove all the first i blocks and then using "remove a single tower block" to remove the rest n-i blocks. Don't need to worry about the same high problem since the loop on i will auto fix the overcount in previous cases.
