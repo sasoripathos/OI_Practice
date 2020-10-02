@@ -13,7 +13,7 @@ Now we need to consider how to handle the Rule 1. During the bisection process f
 2. if S<sub>q[mid]</sub> < S<sub>i</sub> and C<sub>q[mid]</sub> == C<sub>i</sub>, then *mid* must be a potential length for the LIS ended at S<sub>i</sub>. Why? Since in the LIS ended at S<sub>q[mid]</sub>, the second last element must be also < S<sub>i</sub> and is in a different type. We still need to check if *mid + 1* is a potential length for the LIS ended at S<sub>i</sub> before we keep search on the interval [mid+1, r].
 3. if S<sub>q[mid]</sub> >= S<sub>i</sub>, then for sure *mid + 1* can never be a potential length for the LIS ended at S<sub>i</sub>. We need to keep search on the interval [l, mid - 1] as normal.
 
-How the perform the further check in case 2? My solution is to maintain another list q2, q2[i] be the **index** of a dance with smallest level of flair (S value) value such that the LIS ended at S<sub>q2[i]</sub> has length i **and S<sub>q[i]</sub> <= S<sub>q2[i]</sub> and C<sub>q[i]</sub> != C<sub>q2[i]</sub>**. 
+How to perform the further check in case 2? My solution is to maintain another list q2, q2[i] be the **index** of a dance with smallest level of flair (S value) value such that the LIS ended at S<sub>q2[i]</sub> has length i **and S<sub>q[i]</sub> <= S<sub>q2[i]</sub> and C<sub>q[i]</sub> != C<sub>q2[i]</sub>**. 
 
 Then in Case 2, the further check is: if S<sub>q2[mid]</sub> < S<sub>i</sub>, then *mid + 1* must be a potential length for the LIS ended at S<sub>i</sub>.
 
